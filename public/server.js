@@ -3,6 +3,8 @@ const path = require("path");
 const fs = require("fs");
 
 const app = express();
+const port = 8080;
+
 
 // API calls
 
@@ -24,7 +26,7 @@ app.post("/api/notes", function(req, res) {
       const parsedArray = JSON.parse(data);
       console.log(parsedArray);
       parsedArray.push(newNote);
-      console.log("PUSHED");
+      console.log("Added note");
       idArray = parsedArray.map((note, index) => {
         note.id = index;
       });
@@ -32,8 +34,15 @@ app.post("/api/notes", function(req, res) {
   
       fs.writeFile("./db/db.json", stringArray, "utf-8", err => {
         if (err) throw err;
-        console.log("writing");
+        console.log("writing...");
       });
       res.json(parsedArray);
     });
+  });
+
+  
+
+// starts server listening
+  app.listen(port, function() {
+    console.log("App listening on PORT " + port);
   });
