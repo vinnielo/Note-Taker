@@ -11,8 +11,7 @@ app.use(express.json());
 
 // API routes
 app.get("/api/notes", function(req, res) {
-  fs.readFile("./db/db.json", "utf-8", (err, data) => {
-    console.log("data", JSON.parse(data));
+  fs.readFile("./db/db.json",(err, data) => {
     res.json(JSON.parse(data));
   });
 });
@@ -20,10 +19,9 @@ app.get("/api/notes", function(req, res) {
 // need to be able to add a note
 app.post("/api/notes", function(req, res) {
   const addNote = req.body;
-  fs.readFile("./db/db.json", "utf-8", (err, data) => {
+  fs.readFile("./db/db.json", (err, data) => {
     const parsedArray = JSON.parse(data);
     parsedArray.push(addNote);
-    console.log("added...");
     idArray = parsedArray.map((note, index) => {
       note.id = index;
     });
@@ -43,7 +41,7 @@ app.delete("/api/notes/:id", function(req, res) {
   // ID is stored in db.json
   const deleteId = parseInt(req.params.id);
   // read and parse db.json
-  const dbNotes = JSON.parse(fs.readFileSync("./db/db.json", "utf-8"));
+  const dbNotes = JSON.parse(fs.readFileSync("./db/db.json"));
   const filterId = dbNotes.filter(note => note.id !== deleteId);
   // stringify notes
   const stringifiedNotes = JSON.stringify(filterId);
@@ -60,7 +58,7 @@ app.delete("/api/notes/:id", function(req, res) {
 // api routes
 
 app.get("/api/notes", (req, res) => {
-  fs.readFile("./db/db.json", "utf8", (err, data) => {});
+  fs.readFile("./db/db.json",(err, data) => {});
 });
 
 app.get("/notes", function(req, res) {
