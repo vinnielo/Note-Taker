@@ -4,6 +4,7 @@ const fs = require("fs");
 const app = express();
 const PORT = process.env.PORT || 8080;
 
+
 // express functions
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
@@ -12,6 +13,7 @@ app.use(express.json());
 // API routes
 app.get("/api/notes", function(req, res) {
   fs.readFile("./db/db.json",(err, data) => {
+    console.log("data", JSON.parse(data))
     res.json(JSON.parse(data));
   });
 });
@@ -19,6 +21,9 @@ app.get("/api/notes", function(req, res) {
 // need to be able to add a note
 app.post("/api/notes", function(req, res) {
   const addNote = req.body;
+  // need to add 1 to the id. id cant start at 0 i will not have access to the file its id number is 0
+  
+  
   fs.readFile("./db/db.json", (err, data) => {
     const parsedArray = JSON.parse(data);
     parsedArray.push(addNote);
@@ -53,7 +58,6 @@ app.delete("/api/notes/:id", function(req, res) {
   res.json(filterId);
 });
 
-// need to be able to edit a note
 
 // api routes
 
@@ -65,7 +69,7 @@ app.get("/notes", function(req, res) {
   res.sendFile(path.join(__dirname, "/public/notes.html"));
 });
 
-app.get("/", function(req, res) {
+app.get("*", function(req, res) {
   res.sendFile(path.join(__dirname, "/public/index.html"));
 });
 
