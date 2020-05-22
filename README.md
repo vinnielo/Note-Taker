@@ -18,7 +18,7 @@ A simple webite to create and store notes. Deployed via heroku
 
 ## Installation
 
-To install README generator use: npm i
+To install use: npm i
 
 ## Usage
 
@@ -39,7 +39,8 @@ to test use: npm test
 ## Questions
 
 * Email: vinnielo01@gmail.com 
-![profilePic](https://avatars2.githubusercontent.com/u/60115473?v=4)
+![](public\assets\images\Note-taker.jpg)<iframe src="https://drive.google.com/file/d/13Ny1is_HR2jDdBIWm5JdH8YvzXJDB05c/preview" width="640" height="480"></iframe>
+
 
 ## License
 
