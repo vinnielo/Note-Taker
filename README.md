@@ -43,7 +43,8 @@ to test use: npm test
 ## Questions
 
 * Email: vinnielo01@gmail.com 
-![](public\assets\images\Note-taker.jpg)<iframe src="https://drive.google.com/file/d/13Ny1is_HR2jDdBIWm5JdH8YvzXJDB05c/preview" width="640" height="480"></iframe>
+![](public\assets\images\Note-taker.jpg)
+<iframe src="https://drive.google.com/file/d/13Ny1is_HR2jDdBIWm5JdH8YvzXJDB05c/preview" width="640" height="480"></iframe>
 
 
 ## License
