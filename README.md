@@ -18,7 +18,7 @@ https://fierce-dusk-78467.herokuapp.com/
 * [Contributing](#contributing)
 * [Tests](#tests)
 * [Questions](#questions)
-* [License](#license)vi
+* [License](#license)
 
 ## Installation
 
