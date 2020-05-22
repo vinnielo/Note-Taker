@@ -12,13 +12,14 @@ A simple webite to create and store notes. Deployed via heroku
 https://fierce-dusk-78467.herokuapp.com/
 
 ## Table of Contents
-* [Installation](#installation)
-* [Usage](#usage)
-* [Credits](#credits)
-* [Contributing](#contributing)
-* [Tests](#tests)
-* [Questions](#questions)
-* [License](#license)
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)
+- [License](#license)
 
 ## Installation
 
@@ -34,7 +35,7 @@ That it is fully deployed
 
 ## Credits
 
-* Name: vinnielo 
+- Name: vinnielo
 
 ## Tests
 
@@ -42,12 +43,14 @@ to test use: npm test
 
 ## Questions
 
-* Email: vinnielo01@gmail.com 
-![](public\assets\images\Note-taker.jpg)
-<iframe src="https://drive.google.com/file/d/13Ny1is_HR2jDdBIWm5JdH8YvzXJDB05c/preview" width="640" height="480"></iframe>
-
+- Email: vinnielo01@gmail.com
+  ![](public\assets\images\Note-taker.jpg)
+   <!-- blank line -->
+<figure class="video_container">
+<iframe src="https://drive.google.com/file/d/13Ny1is_HR2jDdBIWm5JdH8YvzXJDB05c/preview" frameborder="0" allowfullscreen="true"></iframe>
+</figure>
+  <!-- blank line -->
 
 ## License
 
 Licensed under the MIT license.
-
