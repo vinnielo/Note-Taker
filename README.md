@@ -7,6 +7,10 @@
 
 A simple webite to create and store notes. Deployed via heroku
 
+## Deployed site
+
+https://fierce-dusk-78467.herokuapp.com/
+
 ## Table of Contents
 * [Installation](#installation)
 * [Usage](#usage)
