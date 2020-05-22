@@ -44,7 +44,11 @@ to test use: npm test
 ## Questions
 
 - Email: vinnielo01@gmail.com
+
+## Image of Site
 - ![](public\assets\images\Note-taker.png)
+
+## Video Demo
    <!-- blank line -->
 <figure class="video_container">
  <iframe src="https://drive.google.com/file/d/13Ny1is_HR2jDdBIWm5JdH8YvzXJDB05c/preview" frameborder="0" allowfullscreen="true"></iframe>
