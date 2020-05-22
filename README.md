@@ -44,7 +44,7 @@ to test use: npm test
 ## Questions
 
 - Email: vinnielo01@gmail.com
-- ![](public\assets\images\Note-taker.jpg)
+- ![](public\assets\images\Note-taker.png)
    <!-- blank line -->
 <figure class="video_container">
  <iframe src="https://drive.google.com/file/d/13Ny1is_HR2jDdBIWm5JdH8YvzXJDB05c/preview" frameborder="0" allowfullscreen="true"></iframe>
