@@ -20,20 +20,18 @@ app.get("/api/notes", function(req, res) {
 
 // need to be able to add a note
 app.post("/api/notes", function(req, res) {
-  const addNote = req.body;
+  const addNote = req.body; 
   // need to add 1 to the id. id cant start at 0 i will not have access to the file its id number is 0
-  
-  
   fs.readFile("./db/db.json", (err, data) => {
     const parsedArray = JSON.parse(data);
     parsedArray.push(addNote);
     idArray = parsedArray.map((note, index) => {
-      note.id = index;
+      note.id = index +1;
     });
 
-    JSON.stringify(parsedArray);
+    let stringify = JSON.stringify(parsedArray);
 
-    fs.writeFile("./db/db.json", JSON.stringify(parsedArray), err => {
+    fs.writeFile("./db/db.json", stringify, err => {
       if (err) throw err;
     });
     res.json(parsedArray);
@@ -43,7 +41,7 @@ app.post("/api/notes", function(req, res) {
 // need to be able to delete the note
 
 app.delete("/api/notes/:id", function(req, res) {
-  // ID is stored in db.json
+  // ID is stored in db.json  
   const deleteId = parseInt(req.params.id);
   // read and parse db.json
   const dbNotes = JSON.parse(fs.readFileSync("./db/db.json"));
@@ -61,15 +59,11 @@ app.delete("/api/notes/:id", function(req, res) {
 
 // api routes
 
-app.get("/api/notes", (req, res) => {
-  fs.readFile("./db/db.json",(err, data) => {});
-});
-
-app.get("/notes", function(req, res) {
+app.get("/notes", (req, res) => {
   res.sendFile(path.join(__dirname, "/public/notes.html"));
 });
 
-app.get("*", function(req, res) {
+app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "/public/index.html"));
 });
 
